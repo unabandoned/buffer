@@ -1,36 +1,24 @@
-name: Tests
+name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [master]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
-  unit:
+  test:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        # see https://nodejs.org/en/about/releases/
-        node-version: [16.x, 18.x, 20.x]
-
+        node-version: [20, 22, 24]
     steps:
-    - uses: actions/checkout@main
-    - uses: actions/setup-node@main
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
-
-  standard:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@main
-    - uses: actions/setup-node@main
-      with:
-        # don't use lts/* to prevent hitting rate-limit
-        node-version: 20.x
-    - run: npm install
-    - run: npm run standard
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm test
