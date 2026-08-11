@@ -22,7 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
-    "airtap": "3.0.0",
+    "airtap": "5.0.0",
     "benchmark": "2.1.4",
     "browserify": "17.0.1",
     "concat-stream": "2.0.0",
