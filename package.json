@@ -32,7 +32,7 @@
     "split": "1.0.1",
     "standard": "17.1.2",
     "tape": "5.10.2",
-    "through2": "4.0.2",
+    "through2": "5.0.11",
     "uglify-js": "3.19.3"
   },
   "homepage": "https://github.com/unabandoned/buffer",
