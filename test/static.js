@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('Buffer.isEncoding', function (t) {
   t.equal(B.isEncoding('HEX'), true)

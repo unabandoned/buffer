@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('buffer.toJSON', function (t) {
   const data = [1, 2, 3, 4]

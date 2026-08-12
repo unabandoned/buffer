@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('new buffer from array', function (t) {
   t.equal(

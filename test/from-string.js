@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('detect utf16 surrogate pairs', function (t) {
   const text = '\uD83D\uDE38' + '\uD83D\uDCAD' + '\uD83D\uDC4D'

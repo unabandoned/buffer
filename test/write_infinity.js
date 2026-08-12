@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('write/read Infinity as a float', function (t) {
   const buf = new B(4)

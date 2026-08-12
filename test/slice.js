@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('modifying buffer created by .slice() modifies original memory', function (t) {
   const buf1 = new B(26)

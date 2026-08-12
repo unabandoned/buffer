@@ -1,7 +1,7 @@
 'use strict'
 
 const Buffer = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 const vm = require('vm')
 
 // Get a Uint8Array and Buffer constructor from another context.
