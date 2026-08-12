@@ -1,6 +1,6 @@
 const B = require('../').Buffer
-const isBuffer = require('is-buffer')
-const test = require('tape')
+const isBuffer = function (obj) { return obj != null && obj._isBuffer === true }
+const test = require('./tape-adapter')
 
 test('is-buffer tests', function (t) {
   t.ok(isBuffer(new B(4)), 'new Buffer(4)')

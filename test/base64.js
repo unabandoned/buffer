@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('base64: ignore whitespace', function (t) {
   const text = '\n   YW9ldQ==  '

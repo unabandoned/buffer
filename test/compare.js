@@ -1,5 +1,5 @@
 const B = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('buffer.compare', function (t) {
   const b = new B(1).fill('a')

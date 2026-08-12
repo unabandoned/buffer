@@ -1,6 +1,6 @@
 const B = require('../').Buffer
-const test = require('tape')
-const isnan = require('is-nan')
+const test = require('./tape-adapter')
+const isnan = Number.isNaN
 
 test('buffer.write string should get parsed as number', function (t) {
   const b = new B(64)

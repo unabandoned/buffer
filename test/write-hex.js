@@ -1,7 +1,7 @@
 'use strict'
 
 const Buffer = require('../').Buffer
-const test = require('tape')
+const test = require('./tape-adapter')
 
 test('buffer.write("hex") should stop on invalid characters', function (t) {
   // Test the entire 16-bit space.

@@ -24,6 +24,26 @@
 const assert = require('assert');
 const mustCallChecks = [];
 
+// crypto is available under Node's built-in runtime, so run the real
+// crypto-backed assertions instead of skipping them.
+exports.hasCrypto = true;
+
+// Callbacks to run once the whole suite has finished. The node:test runner in
+// index.js drains these from a final subtest (see drainOnFinish), replacing
+// tape's/process-exit-based finalization so a failed deferred mustCall check
+// actually fails the run.
+const onFinishCallbacks = [];
+
+exports.onFinish = function(cb) {
+  onFinishCallbacks.push(cb);
+};
+
+exports.drainOnFinish = function() {
+  while (onFinishCallbacks.length) {
+    onFinishCallbacks.shift()();
+  }
+};
+
 function runCallChecks(exitCode) {
   if (exitCode !== 0) return;
 
@@ -45,7 +65,7 @@ function runCallChecks(exitCode) {
     console.log(context.stack.split('\n').slice(2).join('\n'));
   });
 
-  if (failed.length) process.exit(1);
+  assert.strictEqual(failed.length, 0);
 }
 
 exports.mustCall = function(fn, exact) {
@@ -53,8 +73,6 @@ exports.mustCall = function(fn, exact) {
 };
 
 function _mustCallInner(fn, criteria = 1, field) {
-  if (process._exiting)
-    throw new Error('Cannot use common.mustCall*() in process exit handler');
   if (typeof fn === 'number') {
     criteria = fn;
     fn = noop;
@@ -72,8 +90,8 @@ function _mustCallInner(fn, criteria = 1, field) {
     name: fn.name || '<anonymous>'
   };
 
-  // add the exit listener only once to avoid listener leak warnings
-  if (mustCallChecks.length === 0) process.on('exit', runCallChecks);
+  // register the drain check only once; index.js runs it in a final subtest
+  if (mustCallChecks.length === 0) exports.onFinish(function() { runCallChecks(0); });
 
   mustCallChecks.push(context);
 
@@ -83,7 +101,22 @@ function _mustCallInner(fn, criteria = 1, field) {
   };
 }
 
-exports.printSkipMessage = function(msg) {}
+exports.printSkipMessage = function(msg) {
+  console.log(`1..0 # Skipped: ${msg}`);
+};
+
+// Node core's common.skip() aborts the process; under the node:test runner a
+// single file's skip must not tear down the whole run, so just log it. In this
+// suite skip() is only reached on the (unused) no-crypto branch.
+exports.skip = function(msg) {
+  console.log(`1..0 # Skipped: ${msg}`);
+};
+
+exports.mustNotCall = function(msg) {
+  return function mustNotCall() {
+    assert.fail(msg || 'function should not have been called');
+  };
+};
 
 // Useful for testing expected internal/error objects
 exports.expectsError = function expectsError(fn, settings, exact) {
