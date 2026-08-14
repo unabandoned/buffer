@@ -1,0 +1,24 @@
+schema: 1
+
+package: "@unabandoned/buffer"
+
+upstream:
+  repo: feross/buffer
+  reason: "unmaintained upstream — released and left idle while its dependency tree ages"
+
+summary: >-
+  Node.js's Buffer API implemented in pure JavaScript for the browser and other
+  environments that lack Node's built-in Buffer.
+
+why-forked: >-
+  A transitive dependency of browserify-style bundling that went unmaintained
+  while its tree aged; forked so Renovate keeps that tree current for the
+  consumers that pull it in transitively.
+
+status: active
+
+used-by:
+  - consumer: "@unabandoned/browserify"
+    purpose: "Buffer polyfill bundled into browser builds in place of Node's built-in."
+
+tags: [browser, buffer, node-core-polyfill, browserify]
