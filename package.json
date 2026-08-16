@@ -17,8 +17,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "21.2.1",
-    "@commitlint/config-conventional": "21.2.0"
+    "@commitlint/cli": "21.2.2",
+    "@commitlint/config-conventional": "21.2.2"
   },
   "homepage": "https://github.com/unabandoned/buffer",
   "jspm": {
