@@ -1,5 +1,17 @@
 # Changelog
 
+## [6.0.6](https://github.com/unabandoned/buffer/compare/buffer-v6.0.5...buffer-v6.0.6) (2026-08-18)
+
+
+### Dependencies & maintenance
+
+* add .unabandoned.yml dashboard metadata ([#33](https://github.com/unabandoned/buffer/issues/33)) ([f05871c](https://github.com/unabandoned/buffer/commit/f05871c3ac6f8022550aedb223ad5038b4d29043))
+* **deps:** update commitlint monorepo to v21.2.2 ([#37](https://github.com/unabandoned/buffer/issues/37)) ([2d44c49](https://github.com/unabandoned/buffer/commit/2d44c49be71eda7f0d707638ca01e74d62c4ade6))
+* **deps:** update unabandoned/.github action to v1.0.1 ([#38](https://github.com/unabandoned/buffer/issues/38)) ([8b25619](https://github.com/unabandoned/buffer/commit/8b25619e454bb74453b59a91296ca798122e7666))
+* **deps:** update unabandoned/.github digest to 461710f ([#35](https://github.com/unabandoned/buffer/issues/35)) ([ae5fe49](https://github.com/unabandoned/buffer/commit/ae5fe49da52ab0934ddc3afbdf04ea763b052313))
+* **deps:** update unabandoned/.github digest to 88ce617 ([#32](https://github.com/unabandoned/buffer/issues/32)) ([b6e90f1](https://github.com/unabandoned/buffer/commit/b6e90f16ca8f8b674dd88bb9568497b2bfeea8a1))
+* pin reusable workflows to the @unabandoned/.github v1.0.0 release ([#36](https://github.com/unabandoned/buffer/issues/36)) ([4e6b71e](https://github.com/unabandoned/buffer/commit/4e6b71e866a63f1d309b6c5afe85552d9e090659))
+
 ## [6.0.5](https://github.com/unabandoned/buffer/compare/buffer-v6.0.4...buffer-v6.0.5) (2026-08-13)
 
 
