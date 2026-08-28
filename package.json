@@ -1,7 +1,7 @@
 {
   "name": "@unabandoned/buffer",
   "description": "Node.js Buffer API, for the browser",
-  "version": "6.0.5",
+  "version": "6.0.6",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
