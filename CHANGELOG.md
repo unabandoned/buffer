@@ -1,5 +1,14 @@
 # Changelog
 
+## [6.0.7](https://github.com/unabandoned/buffer/compare/buffer-v6.0.6...buffer-v6.0.7) (2026-09-22)
+
+
+### Dependencies & maintenance
+
+* **deps:** update unabandoned/.github action to v1.0.4 ([#41](https://github.com/unabandoned/buffer/issues/41)) ([ef54dd0](https://github.com/unabandoned/buffer/commit/ef54dd00b9d513464607d27ea5600036b3ed3936))
+* **deps:** update unabandoned/.github action to v1.0.5 ([#42](https://github.com/unabandoned/buffer/issues/42)) ([11c13b7](https://github.com/unabandoned/buffer/commit/11c13b75ecc5806c3ed6b95e1d5226649e5b16cf))
+* **deps:** update unabandoned/.github action to v1.1.0 ([#44](https://github.com/unabandoned/buffer/issues/44)) ([3d33950](https://github.com/unabandoned/buffer/commit/3d33950bc63bdc7924d124ca5535e87cc072fd2a))
+
 ## [6.0.6](https://github.com/unabandoned/buffer/compare/buffer-v6.0.5...buffer-v6.0.6) (2026-08-28)
 
 
