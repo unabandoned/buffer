@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.8](https://github.com/unabandoned/buffer/compare/buffer-v6.0.7...buffer-v6.0.8) (2026-09-23)
+
+
+### Dependencies & maintenance
+
+* **deps:** update commitlint monorepo to v21.2.3 ([#45](https://github.com/unabandoned/buffer/issues/45)) ([a420bae](https://github.com/unabandoned/buffer/commit/a420bae9c7d99a20c8dff7bf3bc1976161d0c986))
+
 ## [6.0.7](https://github.com/unabandoned/buffer/compare/buffer-v6.0.6...buffer-v6.0.7) (2026-09-22)
 
 
